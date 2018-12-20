@@ -99,8 +99,8 @@ setInterval(function(){
 function Bird(){
     this.y = 500;
     this.x =300;
-    this.gravity = 0.3;
-    this.lift = -7;
+    this.gravity = 0.6;
+    this.lift = -9;
     this.velocity = 0;
 
     this.show = function(){
@@ -131,7 +131,11 @@ function Bird(){
              this.y=0;
              this.velocity=-this.velocity;
          }
+         if(this.y>window.innerHeight-80){
+           this.y=window.innerHeight-100;
+            this.velocity=-5;
     }
+}
 }
 
 
@@ -206,7 +210,7 @@ function updateScore(num) {
     if(score<0){
       sceneOver=true;
       sceneGame=false;
-      var parent=  document.getElementById("div1");
+      var parent=  document.querySelector(".topbar");
       var child = document.getElementById("myDiv");
       parent.removeChild(child);
 
@@ -223,7 +227,7 @@ function updateAltitude(num) {
     if(score<0){
       sceneOver=true;
       sceneGame=false;
-      var parent=  document.getElementById("div1");
+      // var parent=  document.getElementById("div1");
       var child = document.getElementById("myDiv");
       clearInterval(myVar);
       child.x=500;

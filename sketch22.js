@@ -9,10 +9,10 @@ var sceneOver=false;
 var Over;
 
 
-// console.log(scoreEl)
+function Switch(){
+  window.location.assign('index.html');
 
-
-// scoreEl.textContent = score;
+}
 
 function preload(){
     Char = loadImage("assets/Char1.png");
@@ -130,6 +130,10 @@ function Bird(){
              this.y=0;
              this.velocity=-this.velocity;
          }
+         if(this.y>window.innerHeight-80){
+           this.y=window.innerHeight-100;
+            this.velocity=-5;
+    }
     }
 }
 
@@ -205,7 +209,7 @@ function updateScore(num) {
     if(score<0){
       sceneOver=true;
       sceneGame=false;
-      var parent=  document.getElementById("div1");
+      var parent=  document.querySelector(".topbar");
       var child = document.getElementById("myDiv");
       parent.removeChild(child);
 
