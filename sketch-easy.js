@@ -141,7 +141,7 @@ function Bird(){
            this.y=window.innerHeight-100;
             this.velocity=-5;
          }
-         
+
     }
 }
 
@@ -217,11 +217,9 @@ function updateScore(num) {
     if(score<0){
       sceneOver=true;
       sceneGame=false;
-      var parent=  document.getElementById("div1");
+      var parent=  document.querySelector(".topbar");
       var child = document.getElementById("myDiv");
       parent.removeChild(child);
-
-
     }
 
 }

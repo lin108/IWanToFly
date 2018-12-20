@@ -22,20 +22,25 @@
       <style>
         .absolute {
           position: absolute;
-          top: 20px;
-          left: 20px;
-          color: #f4f4f4;
-          z-index: 10;
         }
+        .topbar {
+          z-index: 100;
+          top: 0;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          color: #f4f4f4;
+        }
+
         canvas {
           position: absolute;
           z-index: 1;
         }
         .score-board {
-          top: 10px;
-          left: 10px;
+          /* top: 10px;
+          left: 10px; */
           font-size: 40px;
-          color: #a20306;
+          margin-left: 20px;
 
         }
         .meters-board{
@@ -51,24 +56,27 @@
            font-size: 20px;
           height:60px;
           width:100px;
-          margin-left: 92%;
+          /* margin-left: 92%; */
+        }
+        button.restart {
+          background: rgba(227,219,191, 0.6);
+          color: #f4f4f4;
+          border: none;
+
         }
 
       </style>
 
-
-          <audio autoplay="autoplay" >
-          <source src="assets/1.mp3" type="audio/mp3" />
-
-          <embed height="100" width="100" src="assets/1.mp3" />
-          </audio>
-
-      <button onclick="Switch()">RESTART</button>
+      <audio autoplay="autoplay" >
+        <source src="assets/1.mp3" type="audio/mp3" />
+        <embed height="100" width="100" src="assets/1.mp3" />
+      </audio>
+      <div class="absolute topbar">
+        <div  id="myDiv" class="score-board">HP:10</div>
+        <button onclick="Switch()" class="restart">RESTART</button>
+      </div>
       <div id ="div1">
-
-      <div  id="myDiv" class="score-board absolute">HP:10</div>
-      <div  id="myDiv" class="meters-board absolute">0</div>
-
-    </div>
+        <div  id="myDiv" class="meters-board absolute">0</div>
+      </div>
   </body>
 </html>
