@@ -1,0 +1,21 @@
+body{
+  background-color: rgb(45,44,40);
+}
+
+.Main{
+
+cursor:url("MUp.cur"),auto;
+}
+
+#Img{ position:absolute; top:0px; left:0px; width:50px;pointer-events:none;}
+
+
+.margin{
+  top:300px;
+}
+
+button{
+  background-color:#e3dbbf;
+  height:50px;
+  width:180px;
+}

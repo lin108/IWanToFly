@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p5.js example</title>
+    <style> body {padding: 0; margin: 0;} </style>
+      <script src="libraries/p5.js"></script>
+      <script src='https://rawgit.com/molleindustria/p5.play/master/lib/p5.play.js'></script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.js"></script>
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries//addons/p5.dom.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script>
+
+    <script src="libraries//addons/p5.sound.min.js"></script>
+
+    <script src="sketch-easy.js"></script>
+  </head>
+  <body>
+
+      <style>
+        .absolute {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          color: #f4f4f4;
+          z-index: 10;
+        }
+        canvas {
+          position: absolute;
+          z-index: 1;
+        }
+        .score-board {
+          top: 10px;
+          left: 10px;
+          font-size: 40px;
+          color: #a20306;
+
+        }
+        .meters-board{
+          top: 520px;
+          left: 500px;
+          font-size: 100px;
+          color: #e3dbbf;
+          z-index: 10;
+        }
+
+        button{
+          background-color:#e3dbbf;
+           font-size: 20px;
+          height:60px;
+          width:100px;
+          margin-left: 92%;
+        }
+
+      </style>
+
+
+          <audio autoplay="autoplay" >
+          <source src="assets/1.mp3" type="audio/mp3" />
+
+          <embed height="100" width="100" src="assets/1.mp3" />
+          </audio>
+
+      <button onclick="Switch()">RESTART</button>
+      <div id ="div1">
+
+      <div  id="myDiv" class="score-board absolute">HP:10</div>
+      <div  id="myDiv" class="meters-board absolute">0</div>
+
+    </div>
+  </body>
+</html>
